@@ -1,24 +1,13 @@
-# README
+<h1 align="center">
+  <br>
+  PDX Veguide
+  <br>
+</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<div align="center">
 
-Things you may want to cover:
+## What it is:
 
-* Ruby version
+A searchable database of all restaurants in the Portland metro area that have one of the following qualifications: Entirely vegan menu, vegetarian menu with vegan options, or menu that contains vegan options.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### More info coming soon!
