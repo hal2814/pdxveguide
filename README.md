@@ -10,4 +10,8 @@ A searchable database of all restaurants in the Portland metro area that have on
 * Materialize
 * Sass
 
+#### Current Schema Map
+
+![](app/assets/images/schema_map.png)
+
 ##### More info coming soon!
