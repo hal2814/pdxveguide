@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.nav-wrapper {
+  padding-left: 10px;
+}
