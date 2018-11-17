@@ -1,4 +1,16 @@
-
-<div class="section">
-<h3>Restaurants</h3>
+<% @restaurants.each do |restaurant| %>
+<div class="row">
+  <div class="col s4">
+    <h4><%= restaurant.title %></h4>
+    <p><%= restaurant.restaurant_type %></p>
+  </div>
+  <div class="col s4">
+    <p><%= restaurant.website %></p>
+    <p><%= restaurant.online_menu %></p>
+  </div>
+  <div class="col s4">
+    <p><%= restaurant.location %></p>
+    <p><%= restaurant.hours %></p>
+  </div>
 </div>
+<% end %>
