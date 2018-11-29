@@ -17,3 +17,11 @@
 .nav-wrapper {
   padding-left: 10px;
 }
+
+.title_font {
+  font-family: 'Shrikhand', cursive;
+}
+
+.nav_font {
+  font-family: 'Prata', serif;
+}

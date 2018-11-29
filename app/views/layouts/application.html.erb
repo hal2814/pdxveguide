@@ -6,14 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Prata|Shrikhand" rel="stylesheet">
   </head>
   <nav>
     <div class="nav-wrapper green">
-      <a href="#" class="brand-logo">PDX VeGuide</a>
+      <a href="#" class="brand-logo title_font">PDX VeGuide</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "Restaurants", restaurants_path %></li>
-        <li><a href="#">Grocery</a></li>
-        <li><a href="#">Profile</a></li>
+        <li><%= link_to "Restaurants", restaurants_path, class: "nav_font" %></li>
+        <li><a href="#" class="nav_font">Grocery</a></li>
+        <li><a href="#" class="nav_font">Profile</a></li>
       </ul>
     </div>
   </nav>
