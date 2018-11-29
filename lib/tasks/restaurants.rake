@@ -2,7 +2,7 @@ namespace :restaurants do
   desc "seed restaurants"
   task :seed  => [ :environment ] do
     puts "seeding restaurants..."
-    50.times do
+    55.times do
       title = Faker::Hipster.words(2).join(" ")
       web_title = title.gsub(/\s+/, "")
       Restaurant.create!(location: Faker::Address.street_address,
