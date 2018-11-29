@@ -1,10 +1,8 @@
 class RestaurantsController < ApplicationController
   include RestaurantHelper
-  
+
   def index
-    @restaurants = Restaurant.all()
-    count = Restaurant.count
-    @restaurant_page_count = get_page_count(count)
+    @restaurants = Restaurant.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
   end
 
   def show
