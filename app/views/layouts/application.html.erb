@@ -8,20 +8,32 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Prata|Shrikhand" rel="stylesheet">
     <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <nav>
+  <nav class="navbar">
     <div class="nav-wrapper green">
       <a href="#" class="brand-logo title_font">PDX VeGuide</a>
       <%= image_tag( "radish.png", class: "logo_image") %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "Restaurants", restaurants_path, class: "nav_font" %></li>
-        <li><a href="#" class="nav_font">Grocery</a></li>
-        <li><a href="#" class="nav_font">Profile</a></li>
+        <li>
+          <a href="/restaurants" class="nav_font">
+          <i class="material-icons left">local_dining</i>
+          Restaurants</a>
+        </li>
+        <li><a href="#" class="nav_font">
+          <i class="material-icons left">local_grocery_store</i>
+          Grocery</a>
+        </li>
+        <li><a href="#" class="nav_font">
+          <i class="material-icons left">account_circle</i>
+          Profile</a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <body>
+    <div class="head-buffer"></div>
     <div class="container">
       <%= yield %>
     </div>
