@@ -31,3 +31,11 @@
 .logo_image {
   width: 10%;
 }
+
+.listing-image {
+  width: 100%;
+}
+
+.listing-card-med {
+  height: 350px;
+}
