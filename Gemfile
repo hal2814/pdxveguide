@@ -16,6 +16,7 @@ gem 'devise'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'faker'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'acts-as-taggable-on', '~> 6.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
