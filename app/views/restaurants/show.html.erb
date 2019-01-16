@@ -1,7 +1,36 @@
 <div class="section">
   <div class="row">
-    <div class="col s6 m7">
-      <h2><%= @restaurant.title %></h2>
+    <div class="col s6">
+      <div class="card">
+        <div class="card-content show-card-container">
+          <%= image_tag("restaurant.jpg", class: "show-image") %>
+          <h2 class="listing-font"><%= @restaurant.title %></h2>
+          <div class="listing-type">
+            <% if @restaurant.restaurant_type == 'vegan' %>
+              <h4 class="type-vegan"><%= restaurant.restaurant_type %></h4>
+            <% elsif @restaurant.restaurant_type == 'vegetarian'%>
+              <h4 class="type-vegetarian"><%= @restaurant.restaurant_type %></h4>
+            <% else %>
+              <h4 class="type-vegan-options"><%= @restaurant.restaurant_type %></h4>
+            <% end %>
+          </div>
+          <div class="listing-font">
+            <p><% @restaurant.tag_list.each do |tag| %>
+                <span><%= tag %>,</span>
+              <% end %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s6">
+      <div class="card">
+        <div class="card-content show-card-container">
+          <p><%= @restaurant.website %></p>
+          <p><%= @restaurant.online_menu %></p>
+          <p><%= @restaurant.location %></p>
+          <p><%= @restaurant.hours %></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
