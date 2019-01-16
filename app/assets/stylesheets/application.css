@@ -62,10 +62,35 @@
   height: 165px;
 }
 
+.listing-card-container {
+  height: 380px;
+}
+
+.listing-type {
+  font-family: 'Permanent Marker'
+}
+
 .footer-space {
   height: 50px;
 }
 
 .head-buffer {
   height: 80px;
+}
+
+.type-vegan {
+  color: green;
+}
+
+.type-vegetarian {
+  color: teal;
+}
+
+.type-vegan-options {
+  color: olive;
+}
+
+.type-image {
+  height: 90%;
+  width: 90%;
 }

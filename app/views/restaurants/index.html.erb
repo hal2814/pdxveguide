@@ -1,30 +1,59 @@
 <% @restaurants.each do |restaurant| %>
 <div class="row">
-  <div class="col s4">
-    <div class="card">
-      <div class="card-image">
-        <%= image_tag("restaurant.jpg", class: "listing-image") %>
-        <div class="card-content listing-font listing-image-card-med">
-          <h5><%= link_to restaurant.title, restaurant_path(restaurant.id) %></h5>
-          <p><%= restaurant.restaurant_type %></p>
+  <div class="card">
+    <div class="card-content listing-card-container">
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image">
+            <%= image_tag("restaurant.jpg", class: "listing-image") %>
+            <div class="card-content listing-font listing-image-card-med">
+              <h5><%= link_to restaurant.title, restaurant_path(restaurant.id) %></h5>
+              <p><% restaurant.tag_list.each do |tag| %>
+                  <span><%= tag %>,</span>
+                <% end %></p>
+              <div class="listing-type">
+                <% if restaurant.restaurant_type == 'vegan' %>
+                  <h6 class="type-vegan"><%= restaurant.restaurant_type %></h6>
+                <% elsif restaurant.restaurant_type == 'vegetarian'%>
+                  <h6 class="type-vegetarian"><%= restaurant.restaurant_type %></h6>
+                <% else %>
+                  <h6 class="type-vegan-options"><%= restaurant.restaurant_type %></h6>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="col s4">
-    <div class="card">
-      <div class="card-content listing-font listing-card-med">
-        <p><%= restaurant.website %></p>
-        <p><%= restaurant.online_menu %></p>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-content listing-font listing-card-med">
+            <p><%= restaurant.website %></p>
+            <p><%= restaurant.online_menu %></p>
+            <div class="listing-type">
+              <% if restaurant.restaurant_type == 'vegan' %>
+                <div class="type-image">
+                  <%= image_tag("vegan.png", class: "type-image") %>
+                </div>
+              <% elsif restaurant.restaurant_type == 'vegetarian'%>
+                <div class="type-image">
+                  <%= image_tag("vegetarian.png", class: "type-image") %>
+                </div>
+              <% else %>
+                <div class="type-image">
+                  <%= image_tag("vegan-op.png", class: "type-image") %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="col s4">
-    <div class="card">
-      <div class="card-content listing-font listing-card-med">
-        <p><%= restaurant.location %></p>
-        <p><%= restaurant.hours %></p>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-content listing-font listing-card-med">
+            <p><%= restaurant.location %></p>
+            <p><%= restaurant.hours %></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
